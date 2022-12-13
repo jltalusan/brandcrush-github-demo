@@ -1,1 +1,12 @@
-test limuel
+/// <reference types="Cypress" />
+
+import * as setupPartner from '../../support/pageObjects/setupPartner'
+
+describe('Regression Test Suite', () => {
+    it('Setup a New Partner and Create a Space', () => {
+        setupPartner.signUp()
+        setupPartner.createBusinessProfile()
+        setupPartner.listSpace()
+        setupPartner.displayPartnerAccount()
+    })
+})
